@@ -1,4 +1,16 @@
 import { createTheme } from '@mui/material/styles';
+import { Oxanium } from 'next/font/google';
+import { Kantumruy_Pro } from 'next/font/google';
+
+const oxanium = Oxanium({
+  weight: ['200', '300', '400', '500', '600', '700', '800'],
+  subsets: ['latin'],
+});
+
+const kantumruy = Kantumruy_Pro({
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
+  subsets: ['latin'],
+});
 
 const theme = createTheme({
   palette: {
@@ -8,17 +20,16 @@ const theme = createTheme({
     secondary: {
       main: "#dc004e",
     },
+    background: {
+      default: "#000000",
+      paper: "#281639E6",
+    },
   },
   typography: {
-    fontFamily: [
-      "-apple-system",
-      "BlinkMacSystemFont",
-      '"Segoe UI"',
-      "Roboto",
-      '"Helvetica Neue"',
-      "Arial",
-      "sans-serif",
-    ].join(","),
+    fontFamily: oxanium.style.fontFamily,
+    body1: {
+      fontFamily: kantumruy.style.fontFamily,
+    },
   },
 });
 
