@@ -34,9 +34,10 @@ export default function ContactForm() {
     <Box
       sx={{
         display: "flex",
+        flexDirection: { xs: "column", md: "row" },
         justifyContent: "center",
         alignItems: "center",
-        width: "100%",
+        width: { xs: "90%", md: "100%" },
         height: "100%",
         bgcolor: "#110634F6",
         p: 1,
@@ -145,6 +146,25 @@ export default function ContactForm() {
         >
           Lähetä
         </Button>
+      </Box>
+      <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        width: { xs: "90%", md: "50%" },
+        height: "100%",
+      }}>
+        <Typography variant="h6" color="white" textAlign="center">
+          Miten käytämme yhteystietojasi?
+        </Typography>
+        <Typography variant="body1" color="white" textAlign="center">
+          Me Täpällä emme tykkää sähköposti listoista tai markkinointi spämmistä.
+          Olemme sitoutuneita käyttämään meille annettuja yhteystietoja vastuullisesti.
+          Käytämmekin antamiasi yhteystietoja vain yhteydenottoja varten, emmekä jaa tietojasi 
+          kolmansille osapuolille missään tapauksessa.   
+        </Typography>
       </Box>
     </Box>
   );

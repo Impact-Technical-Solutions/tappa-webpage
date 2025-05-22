@@ -6,6 +6,7 @@ import ContactForm from "./ContactForm";
 import Footer from "./Footer";
 import AboutApp from "./AboutApp";
 import restaurant from "../../public/restaurant.png";
+import Testimonials from "./Testimonials";
 export default function Home() {
   return (
     <Container
@@ -48,7 +49,7 @@ export default function Home() {
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
           alignItems: "center",
-          justifyContent: "space-between",
+          justifyContent: "space-evenly",
           mt: 4,
           gap: 4,
           p: 2,
@@ -63,6 +64,7 @@ export default function Home() {
             alignItems: "center",
             minHeight: "220px",
             p: 2,
+            maxWidth:{md: "33%",}
           }}
         >
           <DescriptionOutlined sx={{ fontSize: 40, color: "white" }} />
@@ -118,6 +120,7 @@ export default function Home() {
         </Box>
       </Box>
       <AboutApp />
+      <Testimonials />
       <ContactForm />
       <Footer />
     </Container>
