@@ -160,10 +160,10 @@ export default function ContactForm() {
           Miten käytämme yhteystietojasi?
         </Typography>
         <Typography variant="body1" color="white" textAlign="center">
-          Me Täpällä emme tykkää sähköposti listoista tai markkinointi spämmistä.
+          Täpällä ei tykätä sähköpostilistoista tai markkinointispämmistä.
           Olemme sitoutuneita käyttämään meille annettuja yhteystietoja vastuullisesti.
           Käytämmekin antamiasi yhteystietoja vain yhteydenottoja varten, emmekä jaa tietojasi 
-          kolmansille osapuolille missään tapauksessa.   
+          kolmannelle osapuolelle missään tapauksessa.   
         </Typography>
       </Box>
     </Box>

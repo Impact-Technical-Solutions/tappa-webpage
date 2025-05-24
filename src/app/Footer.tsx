@@ -63,7 +63,7 @@ export default function Footer() {
             </IconButton>
           </Box>
           <Typography variant="body2" color="white">
-            info@tappa.fi
+            info@tappa-app.fi
           </Typography>
         </Box>
       </Container>
