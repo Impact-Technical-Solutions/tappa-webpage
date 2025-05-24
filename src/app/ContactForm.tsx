@@ -155,6 +155,7 @@ export default function ContactForm() {
         alignItems: "center",
         width: { xs: "90%", md: "50%" },
         height: "100%",
+        pb: 2,
       }}>
         <Typography variant="h6" color="white" textAlign="center">
           Miten käytämme yhteystietojasi?

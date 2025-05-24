@@ -35,7 +35,7 @@ useEffect(() => {
         mt: 4,
         p: 2,
         // bgcolor: "#110634F9",
-        width: { xs: "90%", md: "100%" },
+        width: {xs:"100%", md:"80%"},
       }}
     >
       <Slide in={firstCard} timeout={1000} direction="left">
@@ -47,7 +47,10 @@ useEffect(() => {
             minHeight: "240px",
             p: 2,
             bgcolor: "#110634F9",
-            maxWidth: { md: "33%" },
+            borderTopLeftRadius: { xs: 10, md: 10 },
+            borderTopRightRadius: { xs: 10, md: 0 },
+            borderBottomLeftRadius: { xs: 0, md: 10 },
+            borderBottomRightRadius: { xs: 0, md: 0 },
           }}
         >
           <DescriptionOutlined sx={{ fontSize: 40, color: "white" }} />
@@ -95,6 +98,11 @@ useEffect(() => {
             py: 2,
             minHeight: "240px",
             bgcolor: "#110634F9",
+            borderTopRightRadius: { xs: 0, md: 10 },
+            borderTopLeftRadius: { xs: 0, md: 0 },
+            borderBottomRightRadius: { xs: 10, md: 10 },
+            borderBottomLeftRadius: { xs: 10, md: 0 },
+
           }}
         >
           <InsertChartOutlined sx={{ fontSize: 40, color: "white" }} />

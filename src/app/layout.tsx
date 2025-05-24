@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "./providers";
+import "../embla-carousel/css/embla.css";
 
 export const metadata: Metadata = {
   title: "Täppä",

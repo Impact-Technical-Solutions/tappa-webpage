@@ -31,6 +31,15 @@ const theme = createTheme({
       fontFamily: kantumruy.style.fontFamily,
     },
   },
+  components: {
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          borderRadius: 7,
+        },
+      },
+    },
+  },
 });
 
 export default theme; 
