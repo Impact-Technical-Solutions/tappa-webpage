@@ -13,6 +13,7 @@ import {
   usePrevNextButtons,
 } from "./EmblaCarouselArrowButtons";
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
+import { Box, Typography, Avatar } from "@mui/material";
 
 const TWEEN_FACTOR_BASE = 0.52;
 
@@ -23,6 +24,37 @@ type PropType = {
   slides: number[];
   options?: EmblaOptionsType;
 };
+
+type TestimonialType = {
+  id: number;
+  name: string;
+  role: string;
+  content: string;
+};
+
+const testimonials: TestimonialType[] = [
+  {
+    id: 1,
+    name: "Matti Meikäläinen",
+    role: "Ravintolan omistaja",
+    content:
+      "Täppä on mullistanut inventaarion hallinnan. Säästämme aikaa ja rahaa joka kuukausi.",
+  },
+  {
+    id: 2,
+    name: "Liisa Virtanen",
+    role: "Ravintolapäällikkö",
+    content:
+      "Helppokäyttöinen sovellus, joka tekee juuri sen mitä lupaa. Suosittelen lämpimästi!",
+  },
+  {
+    id: 3,
+    name: "Mikko Korhonen",
+    role: "Keittiömestari",
+    content:
+      "Varaston hallinta ei ole koskaan ollut näin vaivatonta. Täppä on must-have työkalu.",
+  },
+];
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
@@ -112,9 +144,33 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">{index + 1}</div>
+          {testimonials.map((testimonial) => (
+            <div className="embla__slide" key={testimonial.id}>
+              <Box className="embla__slide__number">
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    gap: 2,
+                    p: 3,
+                    textAlign: "center",
+                  }}
+                >
+                  <Typography
+                    variant="body1"
+                    sx={{ mb: 2, fontSize: "1.1rem" }}
+                  >
+                    "{testimonial.content}"
+                  </Typography>
+                  <Typography variant="h6" sx={{ mb: 0.5 }}>
+                    {testimonial.name}
+                  </Typography>
+                  <Typography variant="body2" sx={{ opacity: 0.8 }}>
+                    {testimonial.role}
+                  </Typography>
+                </Box>
+              </Box>
             </div>
           ))}
         </div>

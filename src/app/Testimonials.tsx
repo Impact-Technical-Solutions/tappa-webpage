@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import EmblaCarousel from "@/embla-carousel/tsx/EmblaCarousel";
 import { Box, Fade, Typography } from "@mui/material";
+
+
 export default function Testimonials() {
 
   const [fadeIn, setFadeIn] = useState(false);
