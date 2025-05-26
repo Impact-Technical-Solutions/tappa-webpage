@@ -45,8 +45,9 @@ useEffect(() => {
             flexDirection: "column",
             alignItems: "center",
             minHeight: "240px",
+            maxWidth: {xs: "100%", md: "33%"},
             p: 2,
-            bgcolor: "#110634F9",
+            bgcolor: "#110634F4",
             borderTopLeftRadius: { xs: 10, md: 10 },
             borderTopRightRadius: { xs: 10, md: 0 },
             borderBottomLeftRadius: { xs: 0, md: 10 },
@@ -72,9 +73,10 @@ useEffect(() => {
             flexDirection: "column",
             alignItems: "center",
             minHeight: "240px",
+            maxWidth: {xs: "100%", md: "33  %"},
             px: 4,
             py: 2,
-            bgcolor: "#110634F9",
+            bgcolor: "#110634F4",
           }}
         >
           <EditCalendarOutlined sx={{ fontSize: 40, color: "white" }} />
@@ -94,15 +96,14 @@ useEffect(() => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            px: 4,
-            py: 2,
             minHeight: "240px",
-            bgcolor: "#110634F9",
-            borderTopRightRadius: { xs: 0, md: 10 },
+            maxWidth: {xs: "100%", md: "34%"},
+            p: 2,
+            bgcolor: "#110634F4",
             borderTopLeftRadius: { xs: 0, md: 0 },
-            borderBottomRightRadius: { xs: 10, md: 10 },
+            borderTopRightRadius: { xs: 0, md: 10 },
             borderBottomLeftRadius: { xs: 10, md: 0 },
-
+            borderBottomRightRadius: { xs: 10, md: 10 },
           }}
         >
           <InsertChartOutlined sx={{ fontSize: 40, color: "white" }} />
