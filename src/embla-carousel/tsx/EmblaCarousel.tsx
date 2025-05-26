@@ -35,21 +35,21 @@ type TestimonialType = {
 const testimonials: TestimonialType[] = [
   {
     id: 1,
-    name: "Matti Meikäläinen",
-    role: "Ravintolan omistaja",
+    name: "Tony",
+    role: "Vuoropäällikkö",
     content:
-      "Täppä on mullistanut inventaarion hallinnan. Säästämme aikaa ja rahaa joka kuukausi.",
+      "Täppä on helpottanut suuresti omavalvonnan seurantaa ja inventaarion ylläpitoa. Erityisesti inventaarion tekeminen on huomattavasti jouhevampaa, tuotteiden lisääminen ja poistaminen onnistuu paljon nopeammin kuin kynällä ja paperilla.",
   },
   {
     id: 2,
-    name: "Liisa Virtanen",
-    role: "Ravintolapäällikkö",
+    name: "Noora",
+    role: "Tarjoilija",
     content:
-      "Helppokäyttöinen sovellus, joka tekee juuri sen mitä lupaa. Suosittelen lämpimästi!",
+      "Erittäin hyvä ratkaisu, eikä pelkästään paperijätteen vähentämisen takia - Täpän ulkoasu on selkeä ja helppokäyttöinen, eikä siinä ole mitään turhaa, kaikki ovat oppineet käyttämään sitä nopeasti!",
   },
   {
     id: 3,
-    name: "Mikko Korhonen",
+    name: "Mikko",
     role: "Keittiömestari",
     content:
       "Varaston hallinta ei ole koskaan ollut näin vaivatonta. Täppä on must-have työkalu.",
@@ -166,7 +166,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                   <Typography variant="h6" sx={{ mb: 0.5 }}>
                     {testimonial.name}
                   </Typography>
-                  <Typography variant="body2" sx={{ opacity: 0.8 }}>
+                  <Typography variant="body2" sx={{ opacity: 0.8, fontStyle: "italic" }}>
                     {testimonial.role}
                   </Typography>
                 </Box>
@@ -175,14 +175,22 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           ))}
         </div>
       </div>
-      {/* 
-      <div className="embla__controls">
-        <div className="embla__buttons">
+      <Box
+        className="embla__controls"
+        sx={{
+          display: { xs: "flex", md: "none" },
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 2,
+          mt: 2,
+        }}
+      >
+        <Box className="embla__buttons" sx={{ display: "flex", gap: 10, mt: 1 }}>
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
+        </Box>
 
-        <div className="embla__dots">
+        <Box className="embla__dots" sx={{ display: "flex", gap: 1 }}>
           {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}
@@ -192,8 +200,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
               )}
             />
           ))}
-        </div>
-      </div> */}
+        </Box>
+      </Box>
     </div>
   );
 };
