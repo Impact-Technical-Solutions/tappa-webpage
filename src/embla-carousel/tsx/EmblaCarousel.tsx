@@ -49,11 +49,17 @@ const testimonials: TestimonialType[] = [
   },
   {
     id: 3,
-    name: "Mikko",
+    name: "Teemu",
     role: "Keittiömestari",
     content:
-      "Varaston hallinta ei ole koskaan ollut näin vaivatonta. Täppä on must-have työkalu.",
+      "Inventaarioon käytettävä aika on pudonnut alle puoleen entisestä Täpän avulla. Tarpeen mukaan uusien ominaisuuksien lisääminen on onnistunut pyynnöstä nopeasti.",
   },
+  {
+    id: 4,
+    name: "Emmi",
+    role: "Ravintolapäällikkö",
+    content: "Jokainen työntekijämme pystyy laskemaan inventaarion Täpän selkeän käyttöliittymän avulla hetkessä, ja sen lähettäminen tilitoimistoon suoraan sovelluksesta pitää kirjanpidon ajantasalla. Iso plussa myös huomattavasti pienentyneestä paperimäärästä!",
+  }
 ];
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
