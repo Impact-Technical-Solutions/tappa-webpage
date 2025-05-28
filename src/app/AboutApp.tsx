@@ -47,7 +47,7 @@ export default function AboutApp() {
         <Typography variant="body1" color="white">
           Täppä on erityisesti ravintolayrityksille suunniteltu tehokas
           keskitetty järjestelmä omavalvonnan ja inventaarion ylläpitämiseen.
-          Kaikki yritykseltäsi vaadittavat ja vaatimasi kirjaukset tapahtuvat Täpän sisältä ja myös jäävät sinne. 
+          Kaikki yrityksesi kirjaukset tapahtuvat Täpän sisältä ja myös jäävät sinne. 
         </Typography>
       </Paper>
       <Paper
