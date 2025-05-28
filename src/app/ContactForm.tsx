@@ -59,7 +59,7 @@ export default function ContactForm() {
       };
 
       await emailjs.send(
-        "service_snetasb",
+        "service_l89xkah",
         "template_88noocz",
         templateParams,
         "MEZEAv6JeItjSyw0q"
@@ -89,9 +89,15 @@ export default function ContactForm() {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
 
+    if (name === "phone") {
+      // Only allow numbers and + symbol
+      const sanitized = value.replace(/[^\d+]/g, "");
+      setFormData((prev) => ({ ...prev, [name]: sanitized }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
+  };
   return (
     <Box
       sx={{
@@ -129,6 +135,7 @@ export default function ContactForm() {
           label="Nimi"
           value={formData.name}
           onChange={handleChange}
+          required
           variant="outlined"
           sx={{
             "& .MuiOutlinedInput-root": {
@@ -146,6 +153,7 @@ export default function ContactForm() {
           label="Puhelin"
           value={formData.phone}
           onChange={handleChange}
+          required
           variant="outlined"
           sx={{
             "& .MuiOutlinedInput-root": {
@@ -165,6 +173,7 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           variant="outlined"
+          required
           sx={{
             "& .MuiOutlinedInput-root": {
               color: "white",
@@ -184,6 +193,7 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           variant="outlined"
+          required
           sx={{
             "& .MuiOutlinedInput-root": {
               color: "white",
@@ -248,10 +258,9 @@ export default function ContactForm() {
         </Typography>
         <Typography variant="body1" color="white" textAlign="center">
           Täpällä ei tykätä sähköpostilistoista tai markkinointispämmistä.
-          Olemme sitoutuneita käyttämään meille annettuja yhteystietoja
-          vastuullisesti. Käytämmekin antamiasi yhteystietoja vain
-          yhteydenottoja varten, emmekä jaa tietojasi kolmannelle osapuolelle
-          missään tapauksessa.
+          Olemme sitoutuneita käyttämään antamiasi yhteystietoja vastuullisesti.
+          Käytämme niitä vain yhteydenottoja varten, emmekä jaa tietojasi
+          kolmannelle osapuolelle missään tapauksessa.
         </Typography>
       </Box>
     </Box>
