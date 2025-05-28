@@ -58,14 +58,15 @@ const testimonials: TestimonialType[] = [
     id: 4,
     name: "Emmi",
     role: "Ravintolapäällikkö",
-    content: "Jokainen työntekijämme pystyy laskemaan inventaarion Täpän selkeän käyttöliittymän avulla hetkessä, ja sen lähettäminen tilitoimistoon suoraan sovelluksesta pitää kirjanpidon ajantasalla. Iso plussa myös huomattavasti pienentyneestä paperimäärästä!",
-  }
+    content:
+      "Jokainen työntekijämme pystyy laskemaan inventaarion Täpän selkeän käyttöliittymän avulla hetkessä, ja sen lähettäminen tilitoimistoon suoraan sovelluksesta pitää kirjanpidon ajantasalla. Iso plussa myös huomattavasti pienentyneestä paperimäärästä!",
+  },
 ];
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
-    Autoplay({ delay: 7000, stopOnInteraction: false }),
+    Autoplay({ delay: 700000, stopOnInteraction: false }),
   ]);
   const tweenFactor = useRef(0);
   const tweenNodes = useRef<HTMLElement[]>([]);
@@ -172,7 +173,10 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                   <Typography variant="h6" sx={{ mb: 0.5 }}>
                     {testimonial.name}
                   </Typography>
-                  <Typography variant="body2" sx={{ opacity: 0.8, fontStyle: "italic" }}>
+                  <Typography
+                    variant="body2"
+                    sx={{ opacity: 0.8, fontStyle: "italic" }}
+                  >
                     {testimonial.role}
                   </Typography>
                 </Box>
@@ -191,7 +195,10 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           mt: 2,
         }}
       >
-        <Box className="embla__buttons" sx={{ display: "flex", gap: 10, mt: 1 }}>
+        <Box
+          className="embla__buttons"
+          sx={{ display: "flex", gap: 10, mt: 1 }}
+        >
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </Box>
