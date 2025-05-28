@@ -66,7 +66,7 @@ const testimonials: TestimonialType[] = [
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
-    Autoplay({ delay: 700000, stopOnInteraction: false }),
+    Autoplay({ delay: 7000, stopOnInteraction: false }),
   ]);
   const tweenFactor = useRef(0);
   const tweenNodes = useRef<HTMLElement[]>([]);
@@ -160,7 +160,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                     flexDirection: "column",
                     alignItems: "center",
                     gap: 2,
-                    p: 3,
+                    p: 2,
                     textAlign: "center",
                   }}
                 >

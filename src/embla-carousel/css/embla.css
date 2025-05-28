@@ -126,5 +126,6 @@
   .embla__slide {
     --slide-size: 100%;
     --slide-height: 25rem;
+    --slide-spacing: 0;  
   }
 }
